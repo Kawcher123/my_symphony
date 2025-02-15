@@ -8,6 +8,8 @@ import '../modules/lso_query/bindings/lso_query_binding.dart';
 import '../modules/lso_query/views/lso_query_view.dart';
 import '../modules/root/bindings/root_binding.dart';
 import '../modules/root/views/root_view.dart';
+import '../modules/service_center/bindings/service_center_binding.dart';
+import '../modules/service_center/views/service_center_view.dart';
 import '../modules/specification/bindings/specification_binding.dart';
 import '../modules/specification/views/specification_view.dart';
 
@@ -43,6 +45,11 @@ class AppPages {
       name: _Paths.LSO_QUERY,
       page: () => const LsoQueryView(),
       binding: LsoQueryBinding(),
+    ),
+    GetPage(
+      name: _Paths.SERVICE_CENTER,
+      page: () =>  ServiceCenterView(),
+      binding: ServiceCenterBinding(),
     ),
   ];
 }

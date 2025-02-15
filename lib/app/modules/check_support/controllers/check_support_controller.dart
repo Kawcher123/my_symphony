@@ -7,7 +7,7 @@ class CheckSupportController extends GetxController {
   final count = 0.obs;
   final List<Map<String, String>> supportItems = [
     {'icon': 'assets/icons/call.png', 'title': 'Hotline','route':''},
-    {'icon': 'assets/icons/sc.png', 'title': 'Service Center','route':''},
+    {'icon': 'assets/icons/sc.png', 'title': 'Service Center','route':Routes.SERVICE_CENTER},
     {'icon': 'assets/icons/lso.png', 'title': 'LSO Query','route':Routes.LSO_QUERY},
     {'icon': 'assets/icons/fd.png', 'title': 'Feedback','route':''},
     {'icon': 'assets/icons/sp.png', 'title': 'Specification','route':Routes.SPECIFICATION},

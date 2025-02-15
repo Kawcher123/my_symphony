@@ -33,6 +33,7 @@ class AppTheme {
     primaryColor: AppColors.primaryLight,
     scaffoldBackgroundColor: AppColors.backgroundLight,
     cardColor: AppColors.surfaceLight,
+    dividerColor: AppColors.inputFillLight,
     appBarTheme: AppBarTheme(
       backgroundColor: AppColors.backgroundLight,
     ),
@@ -111,6 +112,7 @@ class AppTheme {
   static final ThemeData darkTheme = ThemeData(
     primaryColor: AppColors.primaryDark,
     scaffoldBackgroundColor: AppColors.backgroundDark,
+      dividerColor: AppColors.inputFillDark,
     cardColor: AppColors.surfaceDark,
       appBarTheme: AppBarTheme(
         backgroundColor: Colors.black,
