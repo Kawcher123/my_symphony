@@ -8,7 +8,7 @@ class AppColors {
   static const Color textPrimaryLight = Color(0xff111111);
   static const Color textSecondaryLight = Colors.black87;
   static const Color textTertiaryLight = Colors.black54;
-  static const Color inputFillLight = Color(0xFFF5F5F5);
+  static const Color inputFillLight = Color(0xFFF5F6FA);
   static const Color shadowColorLight=Color(0xffEAEAEA);
 
   // Dark Theme Colors

@@ -4,6 +4,8 @@ import '../modules/check_support/bindings/check_support_binding.dart';
 import '../modules/check_support/views/check_support_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/lso_query/bindings/lso_query_binding.dart';
+import '../modules/lso_query/views/lso_query_view.dart';
 import '../modules/root/bindings/root_binding.dart';
 import '../modules/root/views/root_view.dart';
 import '../modules/specification/bindings/specification_binding.dart';
@@ -34,8 +36,13 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.SPECIFICATION,
-      page: () =>  SpecificationView(),
+      page: () => SpecificationView(),
       binding: SpecificationBinding(),
+    ),
+    GetPage(
+      name: _Paths.LSO_QUERY,
+      page: () => const LsoQueryView(),
+      binding: LsoQueryBinding(),
     ),
   ];
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class CustomTextField extends StatelessWidget {
   final TextEditingController? controller;
@@ -41,8 +42,8 @@ class CustomTextField extends StatelessWidget {
           style: theme.textTheme.bodyLarge,
           decoration: InputDecoration(
             hintText: hintText,
-            hintStyle: const TextStyle(color: Colors.black38),
-            fillColor: const Color(0xFFF5F6FA),
+            hintStyle:  Get.theme.inputDecorationTheme.hintStyle,
+            fillColor: Get.theme.inputDecorationTheme.fillColor,
             filled: true,
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),

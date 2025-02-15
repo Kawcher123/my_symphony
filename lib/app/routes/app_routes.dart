@@ -7,6 +7,7 @@ abstract class Routes {
   static const ROOT = _Paths.ROOT;
   static const CHECK_SUPPORT = _Paths.CHECK_SUPPORT;
   static const SPECIFICATION = _Paths.SPECIFICATION;
+  static const LSO_QUERY = _Paths.LSO_QUERY;
 }
 
 abstract class _Paths {
@@ -15,4 +16,5 @@ abstract class _Paths {
   static const ROOT = '/root';
   static const CHECK_SUPPORT = '/check-support';
   static const SPECIFICATION = '/specification';
+  static const LSO_QUERY = '/lso-query';
 }

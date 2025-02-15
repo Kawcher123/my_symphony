@@ -36,8 +36,8 @@ class SpecificationCardWidget extends StatelessWidget {
           SizedBox(height: 4),
           Text(value,
               style: TextStyle(
-                  color: Get.theme.textTheme.bodyMedium?.color,
-                  fontSize: 16,
+                  color: Get.theme.textTheme.titleMedium?.color,
+                  fontSize: 14,
                   fontWeight: FontWeight.bold)),
         ],
       ),
