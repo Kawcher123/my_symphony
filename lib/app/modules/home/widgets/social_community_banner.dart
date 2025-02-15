@@ -4,9 +4,9 @@ class SocialCommunityBanner extends StatelessWidget {
   final VoidCallback? onTap;
 
   const SocialCommunityBanner({
-    Key? key,
+    super.key,
     this.onTap,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

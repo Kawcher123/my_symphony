@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:momagictask/app/core/theme/theme_controller.dart';
+import 'package:momagictask/app/modules/home/widgets/trending_item_widget.dart';
+import 'package:momagictask/app/routes/app_pages.dart';
 import '../controllers/home_controller.dart';
 import '../../../widgets/section_title.dart';
 import '../widgets/game_card.dart';
@@ -44,17 +46,18 @@ class HomeView extends GetView<HomeController> {
                 bottom: false,
                 child: Row(
                   children: [
-                     Padding(
-                       padding: const EdgeInsets.symmetric(horizontal: 8.0,vertical: 20),
-                       child: Text(
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 8.0, vertical: 20),
+                      child: Text(
                         'My Symphony',
                         style: TextStyle(
                           color: Get.theme.textTheme.headlineMedium?.color,
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
                         ),
-                                           ),
-                     ),
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -88,10 +91,15 @@ class HomeView extends GetView<HomeController> {
               ),
             ),
             // Support Section
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Image.asset(
-                'assets/images/b3.png',
+            GestureDetector(
+              onTap: () {
+                Get.toNamed(Routes.CHECK_SUPPORT);
+              },
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Image.asset(
+                  'assets/images/b3.png',
+                ),
               ),
             ),
             // Trending Items Section
@@ -114,9 +122,12 @@ class HomeView extends GetView<HomeController> {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: List.generate(controller.trendingItems.length,
                           (index) {
-                        return _buildTrendingItem(
-                            controller.trendingItems[index]['title'] ?? '',
-                            controller.trendingItems[index]['imagePath'] ?? '');
+                        return TrendingItemWidget(
+                            title:
+                                controller.trendingItems[index]['title'] ?? '',
+                            imagePath: controller.trendingItems[index]
+                                    ['imagePath'] ??
+                                '');
                       }),
                     ),
                   ),
@@ -201,44 +212,6 @@ class HomeView extends GetView<HomeController> {
               onTap: () {},
             ),
             const SizedBox(height: 16),
-          ],
-        ),
-      ),
-    );
-  }
-
-
-
-  Widget _buildTrendingItem(String title, String imagePath) {
-    return Card(
-      child: Container(
-        width: 120,
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(16), // Rounded corners
-        ),
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                title,
-                style: const TextStyle(fontSize: 16, color: Colors.black),
-                textAlign: TextAlign.center,
-              ),
-            ),
-            const SizedBox(height: 8),
-            Container(
-              width: double.infinity,
-              height: 100, // Adjust height for the image
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                image: DecorationImage(
-                  image: AssetImage(imagePath),
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
           ],
         ),
       ),

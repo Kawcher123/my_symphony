@@ -7,12 +7,12 @@ class SubscriptionCard extends StatelessWidget {
   final VoidCallback? onTap;
 
   const SubscriptionCard({
-    Key? key,
+    super.key,
     required this.title,
     required this.validDays,
     required this.expiryDate,
     this.onTap,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

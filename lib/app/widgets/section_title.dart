@@ -6,10 +6,10 @@ class SectionTitle extends StatelessWidget {
   final VoidCallback? onSeeMore;
 
   const SectionTitle({
-    Key? key,
+    super.key,
     required this.title,
     this.onSeeMore,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
